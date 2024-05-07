@@ -8,8 +8,6 @@ Funcionalidades a probar:
 - Agregar 2 tareas, completarlas y eliminar la segunda tarea completada
 
 
-
-
 ## 🔎 Requisitos para superar este desafio
 - Se debe realizar un proyecto desde cero y entregar todo el proyecto en el drive (propio)  (no incluir la carpeta node modules)
 - Debe haber un solo archivo de test donde estén incluidos todos los test en un describe
