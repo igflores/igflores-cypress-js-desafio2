@@ -1,4 +1,6 @@
 ## ⚡ Desafio 2
+> SUT: https://pushing-it.vercel.app/
+
 Se debe generar una suite de pruebas para probar el modulo “To do list”. 
 Funcionalidades a probar:
 - Ingresar 5 tareas desde de un set de datos (debe ser un único test)
