@@ -5,12 +5,14 @@ describe('Actividad complementaria 5', () => {
     beforeEach("Prcondiciones", () => {
         cy.visit('');
         cy.url().should('include','pushing-it');
-        cy.get("#registertoggle").dblclick();
-        cy.get('#user').type(consT.Act5.username);
-        cy.get('#pass').type(consT.Act5.password);
-        cy.get('#submitForm').click();
+        
+        cy.xpath('//span[contains(@id,"register")]').dblclick();
+        cy.xpath('//input[@data-cy="user"]').type(consT.Act5.username);
+        cy.xpath('//input[@data-cy="pass"]').type(consT.Act5.password);
+        cy.xpath('//button[starts-with(@id,"submit")]').click();
         cy.get('[id*="user_pushingit"]').should('exist');
-        cy.get('[data-cy="todolistlink"]').click(); 
+
+        cy.xpath('//a[text()="To Do List"]').click(); 
         cy.get('[data-cy="removeAll"]').should('be.visible').click();
         cy.get('.css-tdm0fr').should('not.contain','button','Delete');
     })
