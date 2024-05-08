@@ -1,21 +1,18 @@
 const consT = require('../../support/utils/constants');
 
 describe('Actividad complementaria 5', () => { 
-        //! PENDIENTE: uso de XPATH 
-        //! PENDIENTE: uso de XPATH >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
     beforeEach("Prcondiciones", () => {
         cy.visit('');
-        cy.url().should('include','pushing-it')
-        cy.get("#registertoggle").dblclick()
-        cy.get('#user').type(consT.Act5.username)
-        cy.get('#pass').type(consT.Act5.password)
-        cy.get('#submitForm').click()
-        cy.get(`[id*='user_pushingit']`).should('exist')
+        cy.url().should('include','pushing-it');
+        cy.get("#registertoggle").dblclick();
+        cy.get('#user').type(consT.Act5.username);
+        cy.get('#pass').type(consT.Act5.password);
+        cy.get('#submitForm').click();
+        cy.get('[id*="user_pushingit"]').should('exist');
         cy.get('[data-cy="todolistlink"]').click(); 
-
         cy.get('[data-cy="removeAll"]').should('be.visible').click();
         cy.get('.css-tdm0fr').should('not.contain','button','Delete');
-        
     })
 
     it('TC01: Should add 5 new tasks', () => {
