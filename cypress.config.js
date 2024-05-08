@@ -18,6 +18,7 @@ module.exports = defineConfig({
   },
 
   env: {
+    //También se pueden usar como variables de entorno, pero el desafío 2 requiere de que estén en un archivo json
     username: 'pushingit',
     password: '123456!',
   }

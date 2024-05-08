@@ -6,6 +6,7 @@ Funcionalidades a probar:
 - Ingresar 5 tareas desde de un set de datos (debe ser un único test)
 - Verificar que existan los botones “All”, “Completed”, “Active” y “Remove all”
 - Agregar 2 tareas, completarlas y eliminar la segunda tarea completada
+- Agregar 2 tareas, completarlas y eliminar la primera tarea
 
 
 ## 🔎 Requisitos para superar este desafio
