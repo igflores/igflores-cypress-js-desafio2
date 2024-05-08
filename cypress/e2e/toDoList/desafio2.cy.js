@@ -22,13 +22,15 @@ describe('Actividad complementaria 5', () => {
             let numero = Math.floor(Math.random() * 100000);
             cy.get('[data-cy="task"]').type(`Mi tarea:  ${numero}`);
             cy.get('[data-cy="sendTask"]').click();
-            cy.wait(1000);
             count++;
+
+            cy.get('[class="css-tdm0fr"] p', {timeout:2000}).last().should('have.text',`Mi tarea:  ${numero}`);
             cy.get('[class="css-tdm0fr"] p').should('have.length',count);
         };
         cy.get('[class="css-tdm0fr"] p').should('have.length', 5);
         cy.log(`La cantidad de tareas adicionadas es: ${count}`);
     })
+    
     it('TC02: Should exist the buttons “All”, “Completed”, “Active” y “Remove all”', () => {
         cy.get('[data-cy="all"]').should('be.visible').and('have.text', consT.Act5.allButtonText);
         cy.get('[data-cy="completed"]').should('be.visible').and('have.text',consT.Act5.completedButtonText);
@@ -45,10 +47,10 @@ describe('Actividad complementaria 5', () => {
     // })
 
 
-    // afterEach('Remove all tasks', () => {
-    //     cy.get('[data-cy="removeAll"]').should('be.visible').click();
-    //     cy.get('.css-tdm0fr').should('not.contain','button','Delete');
-    // })
+    afterEach('Remove all tasks', () => {
+        cy.get('[data-cy="removeAll"]').should('be.visible').click();
+        cy.get('.css-tdm0fr').should('not.contain','button','Delete');
+    })
     
 
 
