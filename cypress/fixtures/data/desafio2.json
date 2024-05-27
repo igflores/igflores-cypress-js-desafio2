@@ -1,0 +1,17 @@
+{
+    "Act5": {
+        "username": "pushingit",
+        "password": "123456!",
+        "numberOfTasks": 5,
+        "allButtonText":"All",
+        "completedButtonText":"Completed",
+        "activeButtonText":"Active",
+        "removeAllButtonText":"Remove all",
+        "twoTasks": 2,
+        "message1":"Mi tarea #1",
+        "message2":"Mi tarea #2",
+        "message3":"Mi tarea #3",
+        "message4":"Mi tarea #4",
+        "message5":"Mi tarea #5"
+    }
+}
